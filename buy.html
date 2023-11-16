@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .input{
+            background-color: black;
+            color: antiquewhite;
+            font-size: larger;
+        } */
+        /* .img{
+            visibility: hidden;
+        }
+        .input:hover ~.img{
+            visibility:visible;
+        } */
+    </style>
+</head>
+<body>
+    <button id="btn" style="background-color: black;color: azure; font-size: larger;">Back</button>
+
+    <center><div>
+        <form action="">
+    First Name: <input type="text" name="firstname" placeholder="firstname"><br><br>
+    Last Name: <input type="text" name="lastname" placeholder="lastname"><br><br>
+    Email address: <input type="email" name="email" id="email" placeholder=" enter email address"><br><br>
+    Gender: <input type="radio" id="gender" name="gender" value="male"/>Male  
+    <input type="radio" id="gender" name="gender" value="female">Female<br><br>
+    Mobile number: <input type="tel" name="telephone" placeholder="xxxxxxxxxx"><br><br>
+    Your address: <br>
+    <textarea rows="4" cols="40" placeholder="your address"></textarea><br>
+    </form>
+   <button id="but">submit</button>
+    </div></center> 
+<!--     
+    <h1>Congrates Your order has been Placed</h1> -->
+   <center><img id="img"></center>
+<script>   
+ let btn2=document.getElementById("but")
+        btn2.innerText="submit"
+        btn2.addEventListener("click",()=>{
+            let imgg=document.getElementById("img")
+            imgg.setAttribute("src","https://th.bing.com/th/id/OIP.A5zQE0TYyCTaRL47OjfKrAHaD1?w=296&h=179&c=7&r=0&o=5&dpr=1.3&pid=1.7")
+            imgg.style.width="300px"
+        
+        })
+
+
+ let btn1=document.getElementById("btn")
+        btn1.addEventListener("click",()=>{
+          window.history.back()
+        })
+
+    
+// let buyy=JSON.parse(localStorage.getItem("buy"))
+// console.log(buyy);
+// let butn=document.getElementById("button")
+// butn.innerText="submit"
+//.......
+// buyy.map((val,ind)=>{
+
+// let kill6=document.createElement("h5")
+// kill6.innerText=val["id"]
+// document.body.appendChild(kill6)
+
+// let kill=document.createElement("h4")
+// kill.innerText=val["title"]
+// document.body.appendChild(kill)
+
+// let kill1=document.createElement("p")
+// kill1.innerText=val["price"]
+// document.body.appendChild(kill1)
+
+// let kill2=document.createElement("p")
+// kill2.innerText=val["description"]
+// document.body.appendChild(kill2)
+
+// let kill3=document.createElement("p")
+// kill3.innerText=val["category"]
+// document.body.appendChild(kill3)
+
+// let img1=document.createElement("img")
+// img1.setAttribute("src",val.image)
+// img1.style.width="150px"
+// document.body.appendChild(img1)
+
+// let kill4=document.createElement("p")
+// kill4.innerText=val.rating.rate
+// document.body.appendChild(kill4)
+
+// let kill5=document.createElement("p")
+// kill5.innerText=val.rating.count
+// document.body.appendChild(kill5)
+// })
+
+    </script>
+</body>
+</html>

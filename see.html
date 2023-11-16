@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn" style="background-color: black;color: azure; font-size: larger;">Back</button>
+<script>
+   let btn1=document.getElementById("btn")
+        btn1.addEventListener("click",()=>{
+          window.history.back()
+        })
+
+let dead=JSON.parse(localStorage.getItem("see"))
+console.log(dead);
+
+let kill6=document.createElement("h5")
+kill6.innerText=dead["id"]
+document.body.appendChild(kill6)
+
+
+let kill=document.createElement("h4")
+kill.innerText=dead["title"]
+document.body.appendChild(kill)
+
+let kill1=document.createElement("p")
+kill1.innerText=dead["price"]
+document.body.appendChild(kill1)
+
+let kill2=document.createElement("p")
+kill2.innerText=dead["description"]
+document.body.appendChild(kill2)
+
+let kill3=document.createElement("p")
+kill3.innerText=dead["category"]
+document.body.appendChild(kill3)
+
+let img1=document.createElement("img")
+img1.setAttribute("src",dead.image)
+img1.style.width="150px"
+document.body.appendChild(img1)
+
+let kill4=document.createElement("p")
+kill4.innerText=dead.rating.rate
+document.body.appendChild(kill4)
+
+let kill5=document.createElement("p")
+kill5.innerText=dead.rating.count
+document.body.appendChild(kill5)
+</script>
+</body>
+</html>
+

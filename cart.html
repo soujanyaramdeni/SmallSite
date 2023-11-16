@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div >
+  
+
+    </div>
+    <button id="btn" style="background-color: black;color: azure; font-size: larger;">Back</button>
+
+
+    <script>
+              
+        let btn1=document.getElementById("btn")
+        btn1.addEventListener("click",()=>{
+          window.history.back()
+        })
+
+        let btn=document.createElement("button")
+        btn.innerText="Clear Cart"
+        btn.style.fontSize="larger"
+        document.body.appendChild(btn)
+
+    let cartt=localStorage.getItem("crt");
+    console.log(cartt);
+    cartt==null?cartt=[]:cartt=JSON.parse(cartt);
+    cartt.map((val,ind)=>{
+
+
+        // let kill6=document.createElement("h4")
+        // kill6.innerText=val["id"];
+        // document.body.appendChild(kill6);
+       
+        let div=document.createElement("h3")
+        div.innerText=val["title"];
+        document.body.appendChild(div);
+
+        let kill2=document.createElement("p")
+        kill2.innerText=val["price"]
+        document.body.appendChild(kill2);
+
+
+        let kill1=document.createElement("p")
+        kill1.innerText=val["description"]
+        document.body.appendChild(kill1);
+
+        let kill3=document.createElement("p")
+        kill3.innerText=val["category"]
+        document.body.appendChild(kill3);
+
+        let img=document.createElement("img");
+        img.setAttribute("src",val.image)
+        img.style.width="150px"
+        document.body.appendChild(img);
+
+        let kill4=document.createElement("p")
+        kill4.innerText=val.rating.rate
+        document.body.appendChild(kill4);
+
+        let kill5=document.createElement("p")
+        kill5.innerText=val.rating.count
+        document.body.appendChild(kill5);
+
+        let btn=document.createElement("button")
+        btn.innerText="buy now"
+        btn.style.backgroundColor="black"
+        btn.style.color="white"
+        btn.style.fontSize="larger"
+        document.body.appendChild(btn)
+        btn.addEventListener("click",()=>{
+            window.location.assign("./buy.html")
+            localStorage.setItem("buy",JSON.stringify(arr[ind]))
+        })
+        })
+
+       btn.addEventListener("click",()=>{
+        localStorage.clear("crt")
+        document.body.removeChild(kills);
+    
+    })
+
+
+
+    </script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      let cart1=localStorage.getItem("cart");
+      console.log(cart1);
+      cart1==null?cart1=[]:cart1=JSON.parse(cart1);
+      cart1.map((val,ind)=>{
+
+
+  let imgg=document.createElement("img");
+  imgg.style.width="150px"
+  imgg.setAttribute("src",val.image)
+  document.body.appendChild(imgg)
+
+let p1=document.createElement("p")
+p1.innerText=val["id"];
+document.body.appendChild(p1)
+
+let p2=document.createElement("p")
+p2.innerText=val["title"];
+document.body.appendChild(p2)
+
+let p3=document.createElement("p")
+p3.innerText=val["price"];
+document.body.appendChild(p3)
+
+let p4=document.createElement("p")
+p4.innerText=val["description"];
+document.body.appendChild(p4)
+
+let p5=document.createElement("p")
+p5.innerText=val["category"];
+document.body.appendChild(p5)
+
+let p6=document.createElement("p")
+p6.innerText=val.rating.rate;
+document.body.appendChild(p6)
+
+let p7=document.createElement("p")
+p7.innerText=val.rating.count;
+document.body.appendChild(p7)
+
+
+      }) -->
+    
+    </script>
+</body>
+</html>
